@@ -31,7 +31,7 @@ public class PityxBot extends TelegramLongPollingBot {
         try {
             sendMessage(sendMessage);
         } catch (TelegramApiException e) {
-            System.err.println(e);
+            e.printStackTrace();
         }
     }
 
