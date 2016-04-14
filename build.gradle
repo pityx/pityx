@@ -9,3 +9,6 @@ repositories {
 dependencies {
     compile 'com.github.rubenlagus:TelegramBots:v2.0.2'
 }
+task stage {
+    dependsOn build
+}
