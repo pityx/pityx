@@ -1,14 +1,11 @@
 apply plugin: 'java'
-
 repositories {
-    mavenCentral()
     maven {
         url "https://jitpack.io"
     }
+    mavenCentral()
 }
 
-allprojects {
-    dependencies {
-        compile 'com.github.rubenlagus:TelegramBots:v1.0'
-    }
+dependencies {
+    compile 'com.github.rubenlagus:TelegramBots:v2.0.2'
 }
