@@ -53,5 +53,6 @@
     <orderEntry type="library" name="Gradle: com.sun.jersey:jersey-core:1.19" level="project" />
     <orderEntry type="library" name="Gradle: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.grizzly:grizzly-framework:2.3.23" level="project" />
+    <orderEntry type="module" module-name="bot" />
   </component>
 </module>

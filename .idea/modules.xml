@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/bot/bot.iml" filepath="$PROJECT_DIR$/bot/bot.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/pityx.iml" filepath="$PROJECT_DIR$/.idea/modules/pityx.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/pityx_main.iml" filepath="$PROJECT_DIR$/.idea/modules/pityx_main.iml" group="pityx" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/pityx_test.iml" filepath="$PROJECT_DIR$/.idea/modules/pityx_test.iml" group="pityx" />
