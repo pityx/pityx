@@ -1,7 +1,7 @@
 package io.github.pityx.bot;
 
 import org.telegram.telegrambots.TelegramApiException;
-import org.telegram.telegrambots.api.methods.SendMessage;
+import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 
