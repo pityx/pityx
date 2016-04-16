@@ -1,6 +1,6 @@
 package io.github.pityx.bot;
 
-public enum Bot {
+enum Bot {
     CONFIG;
 
     public String getToken() {

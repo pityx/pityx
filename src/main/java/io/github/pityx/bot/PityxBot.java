@@ -6,28 +6,23 @@ import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 
 public class PityxBot extends TelegramLongPollingBot {
-    private static final String ANSWER = "Ты питух, %username%!";
-    private static final String USERNAME = "%username%";
+    private static final String ANSWER = "Ты питух, ";
 
     @Override
     public void onUpdateReceived(Update update) {
         String chatId = null;
-        String answerText = null;
+        StringBuilder answerText = new StringBuilder(ANSWER);
 
-        if (update.hasInlineQuery()) {
-            chatId = update.getInlineQuery().getFrom().getId().toString();
-            answerText = ANSWER.replace(USERNAME, update.getInlineQuery().getQuery());
-        } else if (update.hasChosenInlineQuery()) {
-            chatId = update.getChosenInlineQuery().getFrom().getId().toString();
-            answerText = ANSWER.replace(USERNAME, update.getChosenInlineQuery().getQuery());
-        } else if (update.hasMessage()) {
-            chatId = update.getMessage().getChat().getId().toString();
-            answerText = ANSWER.replace(USERNAME, update.getMessage().getText());
+        if (update.hasMessage()) {
+            chatId = update.getMessage().getChatId().toString();
+            answerText.append(update.getMessage().getFrom().getFirstName());
         }
 
         SendMessage sendMessage = new SendMessage();
+        sendMessage.enableMarkdown(true);
+        sendMessage.enableNotification();
         sendMessage.setChatId(chatId);
-        sendMessage.setText(answerText);
+        sendMessage.setText(answerText.toString());
         try {
             sendMessage(sendMessage);
         } catch (TelegramApiException e) {
